@@ -20,7 +20,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testNonexistentInputFile() {
 
-		String[] args = { "src\\transformers\\dummyfilename" };
+		String[] args = { "src\\transformers\\resources\\dummyfilename" };
 		TransformerBattle.main(args);
 		String expected = "Unable to read input file" + System.getProperty("line.separator");
 		assertEquals(expected, outputContent.toString());
@@ -29,7 +29,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testDefault() {
 
-		String[] args = { "src\\transformers\\input.txt" };
+		String[] args = { "src\\transformers\\resources\\input.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator") + "Winning team (Decepticons): Soundwave"
 				+ System.getProperty("line.separator") + "Survivors from the losing team (Autobots): Hubcap";
@@ -39,7 +39,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testOptimusPrimePredaking() {
 
-		String[] args = { "src\\transformers\\inputOptimusPrimePredaking.txt" };
+		String[] args = { "src\\transformers\\resources\\inputOptimusPrimePredaking.txt" };
 		TransformerBattle.main(args);
 		String expected = "All competitors have been destroyed" + System.getProperty("line.separator");
 		assertEquals(expected, outputContent.toString());
@@ -48,7 +48,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testOptimusPrimeWin() {
 
-		String[] args = { "src\\transformers\\inputOptimusPrimeWin.txt" };
+		String[] args = { "src\\transformers\\resources\\inputOptimusPrimeWin.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator")
 				+ "Winning team (Autobots): Optimus Prime, Hubcap" + System.getProperty("line.separator")
@@ -59,7 +59,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testPredakingWin() {
 
-		String[] args = { "src\\transformers\\inputPredakingWin.txt" };
+		String[] args = { "src\\transformers\\resources\\inputPredakingWin.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator") + "Winning team (Decepticons): Predaking"
 				+ System.getProperty("line.separator") + "Survivors from the losing team (Autobots): Hubcap";
@@ -69,7 +69,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testTie() {
 
-		String[] args = { "src\\transformers\\inputTie.txt" };
+		String[] args = { "src\\transformers\\resources\\inputTie.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator") + "Teams are tied"
 				+ System.getProperty("line.separator");
@@ -79,7 +79,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testRunawayOpponent() {
 
-		String[] args = { "src\\transformers\\inputRunawayOpponent.txt" };
+		String[] args = { "src\\transformers\\resources\\inputRunawayOpponent.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator")
 				+ "Winning team (Autobots): Bluestreak, Hubcap" + System.getProperty("line.separator")
@@ -90,7 +90,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testSkilledOpponent() {
 
-		String[] args = { "src\\transformers\\inputSkilledOpponent.txt" };
+		String[] args = { "src\\transformers\\resources\\inputSkilledOpponent.txt" };
 		TransformerBattle.main(args);
 		String expected = "1 battle" + System.getProperty("line.separator")
 				+ "Winning team (Autobots): Bluestreak, Hubcap" + System.getProperty("line.separator")
@@ -101,7 +101,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testMultipleBattlesNoSurvivors() {
 
-		String[] args = { "src\\transformers\\inputMultipleBattles.txt" };
+		String[] args = { "src\\transformers\\resources\\inputMultipleBattles.txt" };
 		TransformerBattle.main(args);
 		String expected = "2 battles" + System.getProperty("line.separator") + "Winning team (Decepticons): Soundwave, Runabout"
 				+ System.getProperty("line.separator") + "Survivors from the losing team (Autobots): ";
@@ -111,7 +111,7 @@ public class TransformerBattleTest {
 	@Test
 	public void testMultipleBattlesOneSurvivor() {
 
-		String[] args = { "src\\transformers\\inputMultipleBattlesOneSurvivor.txt" };
+		String[] args = { "src\\transformers\\resources\\inputMultipleBattlesOneSurvivor.txt" };
 		TransformerBattle.main(args);
 		String expected = "2 battles" + System.getProperty("line.separator") + "Winning team (Decepticons): Soundwave, Runabout"
 				+ System.getProperty("line.separator") + "Survivors from the losing team (Autobots): Hubcap";
